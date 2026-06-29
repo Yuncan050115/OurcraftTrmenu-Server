@@ -1,0 +1,22 @@
+name: OurcraftTrmenu-Server
+version: '1.0.0'
+main: com.yuncan.ourcrafttrmenu.server.OurcraftTrmenuServer
+api-version: '1.21'
+author: 云灿 (Yuncan)
+description: OurcraftTrmenu 桌面编辑器的 WebSocket 实时同步服务端
+
+softdepend:
+  - TrMenu
+  - ItemsAdder
+
+commands:
+  octs:
+    description: OurcraftTrmenu-Server 主命令
+    aliases: [ourcrafttrmenuserver, trmenueditor]
+    permission: ourcrafttrmenu.admin
+    usage: /octs reload|status|broadcast
+
+permissions:
+  ourcrafttrmenu.admin:
+    description: 管理员权限
+    default: op

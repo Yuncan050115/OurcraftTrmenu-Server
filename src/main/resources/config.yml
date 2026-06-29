@@ -1,0 +1,47 @@
+# OurcraftTrmenu-Server 默认配置
+# 提供给 OurcraftTrmenu 桌面编辑器的 WebSocket 实时同步服务
+
+server:
+  # 是否启用 WebSocket 服务器
+  enabled: true
+  # 监听端口
+  port: 8765
+  # 绑定地址，0.0.0.0 表示所有网卡（生产环境建议改为 127.0.0.1）
+  host: "0.0.0.0"
+  # 认证 Token，留空则不启用认证
+  # 强烈建议生产环境设置复杂 Token
+  token: ""
+  # 连接超时（毫秒）
+  connect-timeout: 5000
+  # 心跳超时（秒，超过此时间未收到客户端心跳则断开）
+  idle-timeout: 90
+
+# TrMenu 菜单目录（相对于 plugins 目录，通常无需修改）
+trmenu:
+  menus-folder: "TrMenu/menus"
+  # 是否在文件变更时自动推送通知
+  watch-changes: true
+
+# 备份设置（服务器模式）
+backup:
+  # 是否启用自动备份（写入菜单前自动备份原文件）
+  enabled: true
+  # 每个菜单最大备份数量，超出自动清理最旧备份
+  max-count: 20
+
+# 安全设置
+security:
+  # 仅允许本地连接（生产环境强烈建议启用）
+  localhost-only: false
+  # 允许的来源（CORS），* 表示允许所有
+  allowed-origins:
+    - "*"
+  # 单 IP 最大连接数
+  max-connections-per-ip: 5
+
+# 日志
+logging:
+  # 是否记录详细日志
+  verbose: false
+  # 是否记录所有消息
+  log-messages: false
