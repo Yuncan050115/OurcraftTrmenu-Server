@@ -19,7 +19,7 @@ dependencies {
     // JSON 处理（paper-api 自带 gson，但显式声明更稳定）
     implementation("com.google.code.gson:gson:2.11.0")
     // Kotlin coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.11.0")
     // ItemsAdder API（soft）
     compileOnly("com.github.LoneDev6:API-ItemsAdder:3.6.1")
 }
