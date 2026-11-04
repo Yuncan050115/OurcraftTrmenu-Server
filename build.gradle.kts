@@ -15,7 +15,7 @@ repositories {
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
     // WebSocket 服务器
-    implementation("org.java-websocket:Java-WebSocket:1.5.7")
+    implementation("org.java-websocket:Java-WebSocket:1.6.0")
     // JSON 处理（paper-api 自带 gson，但显式声明更稳定）
     implementation("com.google.code.gson:gson:2.11.0")
     // Kotlin coroutines
