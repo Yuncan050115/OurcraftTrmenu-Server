@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
     // WebSocket 服务器
     implementation("org.java-websocket:Java-WebSocket:1.5.7")
     // JSON 处理（paper-api 自带 gson，但显式声明更稳定）
